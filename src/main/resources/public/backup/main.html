@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+<!--    <script src="js/view.js"></script>-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="frame-main" class="div_main layer" style="display: table-column">
+        <h3>Main</h3>
+        <div class="div_sub" style="display: table-cell">
+            <h4>All</h4>
+            <SELECT class="select_list" id="allRooms" name="allRooms" multiple >
+                <option value="room1">Room 1 / public / age:15~25,school:Rice University</option>
+                <option value="room2">Room 2 / public / No restrictions</option>
+                <option value="room3">Room 3 / public / interest:Sports</option>
+                <option value="room4">Room 4 / public / age:20~22</option>
+            </SELECT>
+            <button id="btn-join">Join</button>
+        </div>
+        <div class="div_sub" style="display: table-cell">
+            <h4>Yours</h4>
+            <SELECT class="select_list" id="userRooms" name="userRooms" multiple >
+                <option value="room1">Room 1</option>
+                <option value="room2">Room 2</option>
+                <option value="room3">Room 3</option>
+                <option value="room4">Room 4</option>
+            </SELECT>
+            <button id="btn-enter">Enter</button> <button id="btn-leave">Leave</button>
+        </div>
+        <div class="div_create" style="display: table-cell">
+            <h4>Create</h4>
+            <input type="radio" name="roomType" id="roomType1" value="public" checked="checked">
+            <label for="roomType1">Public</label>
+            <input type="radio" name="roomType" id="roomType2" value="private">
+            <label for="roomType2">Private</label><br />
+            <div class="div_option" id="div_public">
+                <label for="roomName">Room Name</label><br/>
+                <input type="text" id="roomName" required="required"><br/>
+                <label for="restriction_age_from">Age</label><br/>
+                <input type="number" id="restriction_age_from" placeholder="optional" style="width: 67px">
+                <label for="restriction_age_to"> ~ </label>
+                <input type="number" id="restriction_age_to" placeholder="optional" style="width: 67px"><br/>
+                <label for="restriction_school">School</label><br/>
+                <input type="text" id="restriction_school" placeholder="optional"><br/>
+                <label for="restriction_interest">Interest</label><br/>
+                <input type="text" id="restriction_interest" placeholder="optional">
+            </div>
+            <div class="div_option" id="div_private" style="display: none">
+                <label for="search_username">Username</label><br/>
+                <input type="text" id="search_username">
+            </div>
+            <button id="btn-create">Create</button>
+        </div>
+    </div>
+</body>
+</html>

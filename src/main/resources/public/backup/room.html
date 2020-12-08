@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatRoom</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+<!--    <script src="js/view.js"></script>-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="frame-room" class="div_room layer" style="display: table-column">
+        <h3>ChatRoom</h3>
+        <div class="div_room_left" style="display: table-cell" >
+            <h5>Room Info</h5>
+            <div class="div_info" id="roomInfo">
+                <p id="roomName">Room Name</p>
+                <p id="restrictions">restrictions</p>
+            </div>
+            <h5>User List</h5>
+            <SELECT class="select_user_list" id="userList" name="userList" MULTIPLE >
+                <option value="user1">User 1</option>
+                <option value="user2">User 2</option>
+            </SELECT>
+            <div id="admin">
+                <button id="btn-ban">Ban</button>
+            </div>
+        </div>
+        <div class="div_room_right" style="display: table-cell">
+            <h5>Messages</h5>
+            <SELECT class="select_history" id="user_rooms" name="user_rooms" MULTIPLE >
+                <option value="msg1">User 1: Hello</option>
+                <option value="msg2">User 2: Hello!</option>
+                <option value="msg3">User 2: Nice to meet you.</option>
+            </SELECT>
+            <input type="text" id="msg" style="width: 585px"/>
+            <button id="btn-send">Send</button>
+        </div>
+    </div>
+</body>
+</html>
